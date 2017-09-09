@@ -16,7 +16,7 @@ function respond() {
     this.res.end();
   } else if(request.text && botHueRegex.test(request.text)) {
     this.res.writeHead(200);
-    postHueMessage(math.random(0,2));
+    postHueMessage(Math.random(0,2));
     this.res.end();
   } else if(request.image) {
     this.res.writeHead(200);
