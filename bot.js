@@ -17,14 +17,14 @@ function respond() {
     this.res.writeHead(200);
     postHueMessage();
     this.res.end();
-  } else if(request.text && botImgRegex.test(request.text)) {
+  } else if(request.image) {
     this.res.writeHead(200);
     postShitMessage();
     this.res.end();
   } else {
     console.log("don't care");
-    this.res.writeHead(200);
-    this.res.end();
+    this.res.writeHead(200)
+;    this.res.end();
   }
 }
 
