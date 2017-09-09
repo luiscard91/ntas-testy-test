@@ -1,6 +1,6 @@
 var HTTPS = require('https');
 var cool = require('cool-ascii-faces');
-var math = require('plugins/math.min.js');
+var math = require('./plugins/math.min.js');
 
 var botID = process.env.BOT_ID;
 
