@@ -64,9 +64,10 @@ function postShitMessage() {
 }
 
 function postHueMessage() {
-  var botResponse, options, body, botReq;
+  var botResponse, options, body, botReq, hueGifs;
+  hueGifs = ['https://puu.sh/xv87K/a0135e2de6.gif','https://puu.sh/xvAjj/685aa8b205.gif','https://puu.sh/xvAa4/cadd0a5bf6.gif']
 
-  botResponse = 'https://puu.sh/xv87K/a0135e2de6.gif';
+  botResponse = hueGifs[Math.random(0,2)];
 
   options = {
     hostname: 'api.groupme.com',
