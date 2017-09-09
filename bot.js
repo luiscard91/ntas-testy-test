@@ -16,7 +16,7 @@ function respond() {
     this.res.end();
   } else if(request.text && botHueRegex.test(request.text)) {
     this.res.writeHead(200);
-    postHueMessage();
+    postHueMessage(math.random(0,2));
     this.res.end();
   } else if(request.image) {
     this.res.writeHead(200);
@@ -64,11 +64,11 @@ function postShitMessage() {
   botReq.end(JSON.stringify(body));
 }
 
-function postHueMessage() {
+function postHueMessage(index) {
   var botResponse, options, body, botReq, hueGifs;
   hueGifs = ['https://puu.sh/xv87K/a0135e2de6.gif','https://puu.sh/xvAjj/685aa8b205.gif','https://puu.sh/xvAa4/cadd0a5bf6.gif']
 
-  botResponse = hueGifs[math.random(0,2)];
+  botResponse = hueGifs[index];
 
   options = {
     hostname: 'api.groupme.com',
