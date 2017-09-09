@@ -7,7 +7,7 @@ function respond() {
   var request = JSON.parse(this.req.chunks[0]),
       botCoolRegex = /^\/cool guy$/;// respond with cool acii
       botHueRegex = /^\/hue$/;  //respnod with cool hue gif
-      botImgRegex = /((.)*\.jpg$)|((.)*\.png$)/;  //respond to images
+      botImgRegex = /((.)*\.jpg)|((.)*\.png)|((.)*\.jpeg)/;  //respond to images
 
   if(request.text && botCoolRegex.test(request.text)) {
     this.res.writeHead(200);
